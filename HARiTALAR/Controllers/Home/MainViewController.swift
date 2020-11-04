@@ -10,7 +10,7 @@ import MapKit
 import CoreLocation
 import CoreData
 
-class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
+class MainViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -25,7 +25,8 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         super.viewDidLoad()
         
         mapView.delegate = self
-//  MARK:- LOCATION ALMA ISLEMLERI.
+        
+//   MARK:- LOCATION ALMA ISLEMLERI.
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest //Kullanicinin konumunu en dogru/en iyi sekilde almak icin bunu kullaniyoruz.
         locationManager.requestWhenInUseAuthorization() //Kullanicidan lokasyonunu almak icin izin isteme islemi.
@@ -38,7 +39,7 @@ class ViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelega
         
     }
     
-    @objc func choosenLocation(gestureRecognizer:UILongPressGestureRecognizer) { // fonk icine input olarak verdik, bu secilde gestureRecognizer in kendi metodlarina, attributes larina ulasabiliriz.
+    @objc func choosenLocation(gestureRecognizer:UILongPressGestureRecognizer) { // Fonk icine input olarak verdik, bu secilde gestureRecognizer in kendi metodlarina, attributes larina ulasabiliriz.
         
         // Tiklanilan yerin kordinatlarini almak istiyoruz ve Pin olusturalim.Ve bu pin i haritamiza ekliyelim istedigimiz/yapacagimiz islem budur.
         if gestureRecognizer.state == .began {//state: guncel icinde bulundugu durumu kontrol ederiz.began diyerek basmaya basladi mi onu kontrol ederiz.
