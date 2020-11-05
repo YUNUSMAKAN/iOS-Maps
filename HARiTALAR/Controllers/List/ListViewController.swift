@@ -15,6 +15,11 @@ class ListViewController: UIViewController {
     var titleArray = [String]()
     var idArray = [UUID]()
     
+    //VERI AKTARIMI/GOSTERIMI ICIN KULLANICAGIMIZ DEGISKENLER.
+    var chosentTitle = ""
+    var chosenTitleId : UUID?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,16 +28,23 @@ class ListViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
         getData()
     }
+//    MARK:- VIEWWILLAPPEAR HER GORUNUM GORUNDUGUNDE CAGIRILIR.
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name("newPlace"), object: nil)
+    }
     
+//MARK:- Yeni yer eklemek icin.
     @objc func addButton() {
-        let vc = UIStoryboard.myStoryboardName.instantiateViewController(identifier: "MainVC") as! MainViewController
+        chosentTitle = ""
+        let vc = UIStoryboard.myStoryboardName.instantiateViewController(identifier: "MainVC") as! MapViewController
         vc.modalPresentationStyle = .fullScreen
         show(vc, sender: nil)
     }
     
-    func getData() {
+    @ objc func getData() {
         
         let appDelegate = UIApplication.shared.delegate as!AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -77,8 +89,12 @@ extension ListViewController: UITableViewDelegate {
 extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard.myStoryboardName.instantiateViewController(identifier: "MainVC") as! MainViewController
+        chosentTitle = titleArray[indexPath.row]
+        chosenTitleId = idArray[indexPath.row]
+        let vc = UIStoryboard.myStoryboardName.instantiateViewController(identifier: "MainVC") as! MapViewController
         vc.modalPresentationStyle = .fullScreen
+        vc.selectedTitle = chosentTitle
+        vc.selectedTitleId = chosenTitleId
         show(vc, sender: nil)
     
     }
@@ -92,6 +108,7 @@ extension ListViewController: UITableViewDataSource {
         cell.textLabel?.text = titleArray[indexPath.row]
         return cell
     }
+    
     
     
 }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6C4FE9E4254FF68D00220D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4FE9E3254FF68D00220D5C /* AppDelegate.swift */; };
 		6C4FE9E6254FF68D00220D5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4FE9E5254FF68D00220D5C /* SceneDelegate.swift */; };
-		6C4FE9E8254FF68D00220D5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4FE9E7254FF68D00220D5C /* MainViewController.swift */; };
+		6C4FE9E8254FF68D00220D5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4FE9E7254FF68D00220D5C /* MapViewController.swift */; };
 		6C4FE9EB254FF68D00220D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4FE9E9254FF68D00220D5C /* Main.storyboard */; };
 		6C4FE9EE254FF68D00220D5C /* HARiTALAR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C4FE9EC254FF68D00220D5C /* HARiTALAR.xcdatamodeld */; };
 		6C4FE9F0254FF68E00220D5C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C4FE9EF254FF68E00220D5C /* Images.xcassets */; };
@@ -22,7 +22,7 @@
 		6C4FE9E0254FF68D00220D5C /* HARiTALAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HARiTALAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C4FE9E3254FF68D00220D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C4FE9E5254FF68D00220D5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C4FE9E7254FF68D00220D5C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6C4FE9E7254FF68D00220D5C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6C4FE9EA254FF68D00220D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C4FE9ED254FF68D00220D5C /* HARiTALAR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HARiTALAR.xcdatamodel; sourceTree = "<group>"; };
 		6C4FE9EF254FF68E00220D5C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		6C4FEA052550106E00220D5C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				6C4FE9E7254FF68D00220D5C /* MainViewController.swift */,
+				6C4FE9E7254FF68D00220D5C /* MapViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C5E7D4725528F9C00A25511 /* UIStoryboard.swift in Sources */,
-				6C4FE9E8254FF68D00220D5C /* MainViewController.swift in Sources */,
+				6C4FE9E8254FF68D00220D5C /* MapViewController.swift in Sources */,
 				6C4FE9E4254FF68D00220D5C /* AppDelegate.swift in Sources */,
 				6C4FE9EE254FF68D00220D5C /* HARiTALAR.xcdatamodeld in Sources */,
 				6C5E7D3325528C1200A25511 /* ListViewController.swift in Sources */,
