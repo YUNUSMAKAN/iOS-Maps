@@ -175,7 +175,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {//calloutAccessoryControlTapped : oraya tiklandi demek.Oraya tiklandiysa ne olacagini yazacaz.
         if selectedTitle != "" {//Secilen yer bos deil ise Yani latitude ve longtidu vardir demek oluyor bu.
              
-            let requestLocation = CLLocation(latitude: annotationLatitude, longitude: annotationLongitude)
+            var requestLocation = CLLocation(latitude: annotationLatitude, longitude: annotationLongitude)
             //CLGeocoder: Kordinatlar ile yerler arasinda baglanti kurmamaiza yarayan bir siniftir.
             CLGeocoder().reverseGeocodeLocation(requestLocation) { (placemarks, error) in //Bu yapinin adina closure denir.
                 //closure : biz bir islem yapiyoruz sonucunda bize birsey verilecek.Ya error yada placemark dizisi verilicek.
